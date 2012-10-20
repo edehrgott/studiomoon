@@ -1,0 +1,2 @@
+<!-- home_logo -->
+<a href="<?php bloginfo('url'); ?>"><img alt="StudioMoon Stylesite Logo" src="<?php bloginfo('template_directory'); ?>/images/studiomoon_header_large.png" style="border-width: 0px;" /></a>
