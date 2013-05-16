@@ -15,15 +15,17 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, pre
     font-size: 14px;
     line-height: 20px;
 }
+body {
+     min-width: 1024px;
+}
 p {
 	padding: 0;
 	margin-top: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #000000;
-    font-size: 14px;
-    line-height: 20px;
+        font-size: 13px;
+        line-height: 20px;
 }
-
 /*****Custom Classes*****/
 .clearing { clear: both; }
 .clearfix { overflow: hidden; }
@@ -69,6 +71,9 @@ p {
 	position: relative;
 	margin: 0;
 }
+a img{
+border: 0;
+}
 #home_content {
 	position: relative;
 	padding: 0 0 0 0;
@@ -81,32 +86,28 @@ p {
 	background: #fff;
 }
 img.moon1 {
-	width: 20%;
-	position: relative;
+	position: absolute;
 	float: left;
-	left: 55%;
-	top: 40%;
+	right: 120px;
+	top: 350px;
 }
 img.moon2 {
-	width: 20%;
-	position: relative;
+	position: absolute;
 	float: left;
-	left: 58%;
-	top: 40%;
+	right: 30px;
+	top: 350px;
 }
 img.moon3 {
-	width: 20%;
-	position: relative;
+	position: absolute;
 	float: right;
-	right: 80%;
-	top: 40%;
+	left: 30px;
+	top: 350px;
 }
 img.moon4 {
-	width: 20%;
-	position: relative;
+	position: absolute;
 	float: right;
-	right: 35%;
-	top: 40%;
+	left: 129px;
+	top: 350px;
 }
 #home_right_side {
 	position: relative;
@@ -117,8 +118,8 @@ img.moon4 {
 }
 #page_content {
 	position: relative;
-	margin: 0 0 0 250px;
-	padding: 40px 40px 0 40px;
+	margin: 0 0 0 197px;
+	padding: 55px 40px 0 54px;
 	line-height: 1.4em;
 }
 #page_content.black {
@@ -128,10 +129,10 @@ img.moon4 {
 	background: #fff;
 }
 #page_content h1 {
-	font-family: EngraversGothicBT-Regular; 
-	font-size: 30px;
-	font-weight: normal;
-	padding: 0 0 26px 0;
+     font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 0 89px 0;
 }
 #page_content.black h1 {
 	color: #fff;	
@@ -140,11 +141,9 @@ img.moon4 {
 	color: #000;	
 }
 #page_content h2 {
-	font-family: MrsEavesItalicRegular;
-	font-size: 40px;
+     font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
 	font-weight: normal;
-	line-height: 40px;
-	padding: 0 0 10px 0;
 }
 #page_content.black h2 {
 	color: #fff;	
@@ -193,13 +192,24 @@ img.moon4 {
     color: #5F7292 ;
     text-decoration: underline;
 }
+h1.identity {
+     font-family: EngraversGothicBT-Regular !important;
+     font-size: 26px !important;
+     letter-spacing: 4px !important;
+     padding: 5px 0 85px 0 !important;
+}
+h2.identity {
+     font-family: MrsEavesItalicRegular !important;
+     font-size: 32px !important;
+     line-height: 36px;
+}
 #left_col {
 	position: absolute;
 	float: left;
 	margin: 0 0 -10px 0;
 	z-index: 100;
-	width: 200px;
-	padding: 25px 20px 0 30px;
+	width: 147px;
+	padding: 50px 20px 0 30px;
 }
 #left_col.white {
 	background: #000;
@@ -257,7 +267,7 @@ img.moon4 {
 
 /*** nav styling ***/
 .menu-menu-container {
-	padding: 45px 0 0 0;
+	padding: 71px 0 0 0;
 }
 .sf-menu, .sf-menu * {
 	margin:			0;
@@ -410,7 +420,7 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-vertical, .sf-vertical li {
 	list-style-type: none;
 	text-align: right;
-	padding: 0 20px 30px 0;
+	padding: 0 20px 40px 0;
 	text-transform: lowercase;
 }
 /* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
@@ -421,28 +431,33 @@ li.sfHover > a > .sf-sub-indicator {
 }
 .sf-vertical a {
 	text-decoration: none;
-	font-size: 12px;
-	line-height: 18px;
+	font-size: 10px;
+	line-height: 10px;
 }
 .black a {
-	color: #000;
+	color: #bdbdbd;
 }
 .white a {
-	color: #fff;
+	color: #969696;
 }
 .sf-vertical a:hover {
     color: #fff;
     font-weight: bold;
 }
 .black a:hover {
-    color: #222;
+    color: #000;
     font-weight: bold;
 }
 .white a:hover {
-    color: #ddd;
+    color: #fff;
     font-weight: bold;
 }
-.current-menu-item a {
+.black .current-menu-item a {
+     color: #000;
+	font-weight: bold;
+}
+.white .current-menu-item a {
+     color: #fff;
 	font-weight: bold;
 }
 ul.l_sub_menu a {
@@ -500,6 +515,39 @@ ul.l_sub_menu ul.l_sub_menu ul.l_sub_menu .current-menu-item a:hover {
 .sf-vertical li:hover > a > .sf-sub-indicator,
 .sf-vertical li.sfHover > a > .sf-sub-indicator {
 	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+.sf-vertical-sub, .sf-vertical-sub li {
+	list-style-type: none;
+	text-align: left;
+	padding: 0 20px 0 0;
+    line-height: 17px;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical-sub li:hover ul,
+.sf-vertical-sub li.sfHover ul {
+	left:	10em; /* match ul width */
+	top:	0;
+}
+.sf-vertical-sub {
+     padding: 25px 0 0 0;
+}
+ul.sf-vertical-sub {
+     margin-left: 0 !important;
+}
+.sf-vertical-sub a {
+     color: #bcbebf !important;
+     text-decoration: none;
+     font-size: 11px;
+     line-height: 15px;
+     font-style: italic;
+}
+.sub-black a:hover {
+     text-decoration: none !important;
+     color: #fff !important;
+}
+.sub-white a:hover {
+     text-decoration: none !important;     
+     color: #000 !important;
 }
 
 /*** End nav styling ***/
@@ -725,32 +773,260 @@ blockquote{
 	margin: 0px;
 	padding: 0px;
 	}
+     
+.three_col_list {
+     float: left;
+     width: 100%;
+}
+
+.three_col_list ul li {
+     line-height: 28px !important;
+     font-size: 11px;
+     margin-left: -15px;
+     float: left;
+     width: 24%;
+     list-style: none;
+}     
+     
+#slider {
+     position: relative;
+     float: left;
+}
 .flex-caption {
+     padding: 23px 0 0 0;
+     font-size: 12px;
+     line-height: 16px;
+     text-align: center;
+}
+.flex-title {
 	width: 96%;
 	padding: 2%;
 	position: relative;
-	left: 0px;
+	left: 20px;
+    top: -32px;
 	bottom: 0px;
 	color: #000;
-	text-align: center;
-	font-size: 14px;
+	font-size: 16px;
+    font-weight: bold;
 	line-height: 18px;
 }
 .flex-description {
-	width: 96%;
+	width: 300px;
 	padding: 2%;
 	position: relative;
-	left: 0px;
+	left: 20px;
+    top: -12px;
 	bottom: 0px;
 	color: #000;
-	text-align: left;
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 12px;
+	line-height: 20px;
 }
-#names.flexslider {
-	width: 60%; /*change for responsiveness */
-	height: auto;
+
+.flex-description a {
+     color: #bcbebf !important;
+     font-style: italic !important;
+     font-size: 11px;
+     line-height: 15px;
+     text-decoration: none !important;
 }
-#names ul {
-	margin: 0;
+.flex-description a:hover {
+     text-decoration: none !important;
+     color: #000000 !important;
+}
+.flex-link {
+     width: 96%;
+     padding: 2%;
+     position: relative;
+     right: 300px;
+     top: 235px;
+     bottom: 0px;
+     color: #000;
+     font-size: 12px;
+     line-height: 14px;
+}
+
+.flex-link a {
+     color: #bcbebf !important;
+     font-style: italic !important;
+}
+
+.flex-control-nav {
+     width: 540px !important;
+}
+.flex-direction-nav a {
+     opacity: 1 !important;
+}
+.flex-prev {
+     left: 12px !important; 
+}
+.flex-next {
+     right: 12px !important;
+}
+
+ul.slides li {
+     display: none;
+}
+
+#slider-image.imageslider {
+     position: relative;
+     width: 536px;
+     height: 422px;
+     float: left;
+}
+
+#slider-image.logoslider {
+     position: relative;
+     width: 536px;
+     height: 422px;
+     float: left;
+}
+
+#slider-image ul {
+     margin: 0;
+}
+
+.polaroidslider {
+     margin: -58px 0 0 -58px;
+     background: white;
+     position: relative;
+     width: 542px;
+     height: 426px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -o-border-radius: 4px;
+     border-radius: 4px;
+     box-shadow: 10px 10px 10px #aaa9a9;
+     -webkit-box-shadow: 10px 10px 10px #aaa9a9;
+     -moz-box-shadow: 10px 10px 10px #aaa9a9;
+     -o-box-shadow: 10px 10px 10px #aaa9a9;
+}
+
+#slider-title.polaroidtitleslider {
+     width: 300px;
+     position: absolute;
+     left: 543px;
+     top: 92px;
+}
+
+#menucircles {
+     padding: 0 0 0 0;
+     margin: -43px 0 0 -17px;
+}
+
+#circle-0-0 {
+	background: #535593;
+}
+#circle-0-2 {
+	background: #DE7025;
+}
+#circle-1-0 {
+	background: #00AEA6;
+}
+#circle-1-2 {
+	background: #C1D631;
+}
+#circle-2-1 {
+	background: #ffe500;
+}
+#circle-2-3 {
+	background: #A53541;
+}
+#circle-3-0 {
+	background: #74BF44;
+}
+#circle-3-2 {
+	background: #4F91CD;
+}
+.menucircle {
+     float: left;
+     width: 90px;
+     height: 90px;
+     background: #fff;
+     -moz-border-radius: 45px;
+     -webkit-border-radius: 45px;
+     border-radius: 45px;
+     margin: 17px;
+     position: relative;
+}
+.circledim {
+     opacity: 0.6;
+}
+.circlebright {
+     opacity: 1.0;
+}
+.circlerow {
+	width: 600px;
+}
+.menucircletext a {
+     color: #000 !important;
+     text-decoration: none !important;
+     line-height: 10px;
+     font-size: 10px;
+     display: table-cell; 
+     vertical-align: middle; 
+     text-align: center; 
+     
+}
+.menucircletext a:hover {
+     font-weight: normal !important;
+}
+.menucircletext {
+     position: absolute;
+     top: 21px;
+     width: 90px; 
+     height: 45px; 
+     display: table;     
+}
+#logocircles {
+	padding: 15px 15px 0 0;
+     margin: -37px 0 0 -6px;
+}
+
+#logocircles img {
+     height: auto;
+     position: relative;
+     top: 0px;
+     left: 0px;
+}
+
+.logocircle {
+	float: left;
+	width: 48px;
+	height: 48px;
+	background: #fff;
+	-moz-border-radius: 24px;
+	-webkit-border-radius: 24px;
+	border-radius: 24px;
+	margin: 6px;
+}
+.logocircle:hover {
+	background: #fff;
+}
+.logocirclerow {
+	width: 500px;
+}
+#contact-us {
+     position: relative;
+     width: 536px;
+     height: 401px;
+     float: left;
+     margin: -84px 0 0 -58px;
+     background: white;
+     border: 4px solid white;
+     position: relative;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -o-border-radius: 4px;
+     border-radius: 4px;
+     box-shadow: 10px 10px 10px #222;
+     -webkit-box-shadow: 10px 10px 10px #222;
+     -moz-box-shadow: 10px 10px 10px #222;
+     -o-box-shadow: 10px 10px 10px #222;
+     zoom: 1;
+}
+#contact-us p {
+     padding: 0 0 0 54px;
+}
+#contact-info {
+     padding: 89px 0 0 0;
 }

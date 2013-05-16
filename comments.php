@@ -56,7 +56,8 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<!--<p class="nocomments">Comments are closed.</p></div>-->
+		<!--<p class="nocomments">Comments are closed.</p>-->
+</div> <!-- commentblock -->
 
 	<?php endif; ?>
 <?php endif; ?>

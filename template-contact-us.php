@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: black-on-white
+Template Name: contact us
 */
 
 get_header(); ?>
@@ -12,21 +12,18 @@ get_header(); ?>
 		<?php get_template_part( 'nav-white' ) ; // left column navigation ?>
 
 		<div id="page_content" class="white">
+		<div id="contact-us">
 			<?php if (have_posts()) : while (have_posts()) : the_post();
-                    $title_override = get_field('title_override');
-                    if (!($title_override)) {
-                         the_title('<h1>', '</h1>');
-                    }
+				echo '<div id="contact-info">';
 				the_content(__('Read more'));?>
 				<!-- <?php trackback_rdf(); ?> -->
 				<?php endwhile; else: ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; 
                     
-		       comments_template(); // Get wp-comments.php template
-                   
-			wp_nav_menu(array('menu_class' => 'sf-vertical-sub' , 'theme_location' => 'sub-menu', 'container_class' => 'sub-white')); ?>
-             
-				
+		       comments_template(); // Get wp-comments.php template ?>
+				</div>
+                                
+		</div>	
           </div> <!-- page content -->
 	</div> <!-- container -->
 	<?php get_footer(); ?>
@@ -43,8 +40,8 @@ jQuery(document).ready(function() {
 		} else {
 			var contentheight = (jQuery(window).height()) - 50;
 		};
-        jQuery('#left_col.white').css({
-               'height' : contentheight + 'px'
+		jQuery('#left_col.white').css({
+				'height' : contentheight + 'px'
           }) 
      };
        

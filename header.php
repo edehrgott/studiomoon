@@ -1,6 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
+<!-- developed by Ed Ehrgott, Tekpals  www.tekpals.com -->
 <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 <title>
 <?php
@@ -74,7 +75,7 @@ if( (is_front_page()) ) {  // for home page only
  * 
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2388774
  * 
- * © 2012 Bitstream Inc
+ * 2012 Bitstream Inc
 */
 
 -->
@@ -87,8 +88,6 @@ wp_head(); ?>
 
 <body>
 
-<a name="top">
-
 <div id="masthead">
 	<?php
 	if( (is_front_page()) ) {  // for home and sub page headers
@@ -97,7 +96,4 @@ wp_head(); ?>
 	    include('sub_logo.php');  // show sub page logo
 	} ?>
 	
-	<div id="h_menu">
-		<?php include('nav.php'); // main navigation ?>
-	</div>
 </div>

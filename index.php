@@ -2,13 +2,13 @@
 
 <div id="wrapper1">
 <div id="wrapper2">
-	    <div id="container">
+	<div id="container">
 
-	        <?php get_sidebar(); ?> 
+	     <?php get_sidebar(); ?> 
 			
-			<?php get_template_part( 'nav' ) ; // left column navigation ?>
+		<?php get_template_part( 'nav' ) ; // left column navigation ?>
 
-			<div id="page_content">
+		<div id="page_content">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 
                 <div class="contentdate">
@@ -28,13 +28,11 @@
                     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; ?>
                     
 		            <?php comments_template(); // Get wp-comments.php template ?>
-
-                </div>  
 				
-            </div> <!-- page content -->
-		</div> <!-- container -->
-    <?php get_footer(); ?>
-	</div> <!-- wrapper2 -->  
+          </div> <!-- page content -->
+	</div> <!-- container -->
+	<?php get_footer(); ?>
+</div> <!-- wrapper2 -->  
 </div> <!-- wrapper1 -->
 
 </body>

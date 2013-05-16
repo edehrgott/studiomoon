@@ -14,13 +14,13 @@
 			<div id="home_content">
                 
                 <div id="home_left_side">
-			   	<img class="moon1" src="/assets/moon1.png" alt="full moon">
-			     <img class="moon2" src="/assets/moon2.png" alt="crescent moon">
+			   	<img class="moon1" src="/assets/moon1_70px.png" alt="full moon">
+			     <img class="moon2" src="/assets/moon2_70px.png" alt="crescent moon">
                 </div> <!-- home left side -->
                         
                 <div id="home_right_side">
-			   	<img class="moon3" src="/assets/moon3.png" alt="half moon">
-			     <img class="moon4" src="/assets/moon4.png" alt="new moon">
+			   	<img class="moon3" src="/assets/moon3_70px.png" alt="half moon">
+			     <img class="moon4" src="/assets/moon4_70px.png" alt="new moon">
                 </div> <!-- home right side -->
 				
             </div> <!-- home content -->
@@ -34,8 +34,12 @@ jQuery(document).ready(function() {
 
 	    // get window height and feed it to css height
 	    function windowresize() {
-		  var contentheight = jQuery(window).height();
-		  jQuery('#home_left_side').css({
+		if (jQuery(window).height() <= 693) {
+			var contentheight = 693;
+		} else {
+			var contentheight = jQuery(window).height();
+		};
+        jQuery('#home_left_side').css({
 			   'height' : contentheight + 'px'
 		  })
 		  jQuery('#home_right_side').css({
@@ -121,11 +125,10 @@ jQuery(document).ready(function() {
 			   );
 	    }
 	    
-	    moon1fade();
+        moon1fade();
 	    moon2fade();
 	    moon3fade();
 	    moon4fade();
-	    
 });
 </script>
 

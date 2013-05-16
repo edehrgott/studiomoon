@@ -25,9 +25,6 @@ function studiomoon_register_sidebars () {
 	add_action( 'widgets_init', 'studiomoon_register_sidebars' );
 
 }
-	
-// theme requires jQuery
-wp_enqueue_script('jquery');
 
 // register all scripts
 function studiomoon_scripts() {
@@ -58,8 +55,8 @@ add_action( 'wp_enqueue_scripts', 'studiomoon_register_styles' );
 
 // menus
 function studiomoon_register_menus() {
-	register_nav_menus(array('primary' => __('Primary Menu', 'studiomoon')));
-	register_nav_menus(array('naming' => __('Naming Menu', 'studiomoon')));	
+	register_nav_menus(array('primary' => __('Primary Menu', 'studiomoon'),
+							'sub-menu' => __('Sub Menu', 'studiomoon')));	
 }
 
 add_action( 'init', 'studiomoon_register_menus' );
@@ -114,7 +111,7 @@ function hide_admin_menu()
 	global $current_user;
 	get_currentuserinfo();
  
-	if($current_user->user_login != 'admin')
+	if($current_user->user_login != 'tekpals')
 	{
 		echo '<style type="text/css">#toplevel_page_edit-post_type-acf{display:none;}</style>';
 	}
